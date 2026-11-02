@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok / Katalog | BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">B</span>
+                BukuKita
+            </a>
+
+            <div class="nav-label">MENU UTAMA</div>
+
+            <nav>
+
+                <a class="nav-link " href="dashboard.html">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a class="nav-link active" href="stok.html">
+                    <span class="nav-icon">▤</span>
+                    Stok / Katalog
+                </a>
+
+                <a class="nav-link " href="checkout.html">
+                    <span class="nav-icon">🛒</span>
+                    Pemesanan
+                </a>
+
+                <a class="nav-link " href="tracking.html">
+                    <span class="nav-icon">⇢</span>
+                    Tracking
+                </a>
+
+                <a class="nav-link " href="laporan.html">
+                    <span class="nav-icon">▥</span>
+                    Laporan
+                </a>
+
+                <a class="nav-link " href="history.html">
+                    <span class="nav-icon">◷</span>
+                    History Transaksi
+                </a>
+
+            </nav>
+
+            <!-- Informasi Sidebar -->
+            <div class="sidebar-bottom">
+                Aplikasi Pemesanan Buku<br>
+                UTS Pemrograman Web 1<br>
+                © <span id="tahun"></span> BukuKita
+            </div>
+
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <div class="crumb">
+                        BukuKita / Informasi Stok / Katalog
+                    </div>
+
+                    <h1>Informasi Stok / Katalog</h1>
+                </div>
+
+                <div class="user-pill">
+
+                    <span class="avatar" id="inisial">U</span>
+
+                    <span id="namaPengguna">Pengguna</span>
+
+                    <button class="btn btn-light btn-small" data-logout>
+                        Keluar
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- Daftar Katalog Buku -->
+            <div class="card">
+
+                <div class="section-head" style="margin-top: 0">
+
+                    <div>
+                        <h2>Daftar Katalog Buku</h2>
+
+                        <p class="muted">
+                            Data diambil dari variabel
+                            <code>dataKatalogBuku</code> pada data.js.
+                        </p>
+                    </div>
+
+                    <button class="btn" onclick="bukaModal('modalStok')">
+                        ＋ Tambah Stok
+                    </button>
+
+                </div>
+
+                <div class="notice">
+                    Pilih tombol <strong>+ Keranjang</strong> untuk
+                    menambahkan buku ke halaman pemesanan.
+                </div>
+
+                <!-- Tabel Stok Buku -->
+                <div class="table-wrap">
+
+                    <table class="table">
+
+                        <thead>
+                            <tr>
+                                <th>Cover</th>
+                                <th>Nama Buku / Kode</th>
+                                <th>Jenis</th>
+                                <th>Edisi</th>
+                                <th>Stok</th>
+                                <th>Harga</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelStok">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="muted" style="font-size: 12px">
+                    Jumlah judul buku:
+                    <strong id="jumlahBuku">0</strong>
+                </p>
+
+            </div>
+
+            <!-- Modal Tambah Stok -->
+            <div class="modal-backdrop" id="modalStok">
+
+                <div class="modal">
+
+                    <div class="modal-head">
+
+                        <h2>Tambah Data Stok</h2>
+
+                        <button
+                            class="close"
+                            onclick="tutupModal('modalStok')"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <form id="formStok" class="form-grid">
+
+                        <div class="field">
+                            <label>Kode Barang</label>
+                            <input id="kode" required>
+                        </div>
+
+                        <div class="field">
+                            <label>Nama Buku</label>
+                            <input id="namaBuku" required>
+                        </div>
+
+                        <div class="field">
+
+                            <label>Jenis Barang</label>
+
+                            <select id="jenis">
+                                <option>Buku Ajar</option>
+                                <option>Buku Referensi</option>
+                                <option>Novel</option>
+                                <option>Lainnya</option>
+                            </select>
+
+                        </div>
+
+                        <div class="field">
+                            <label>Edisi</label>
+                            <input
+                                id="edisi"
+                                type="number"
+                                min="1"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label>Stok</label>
+                            <input
+                                id="stokBaru"
+                                type="number"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label>Harga (angka)</label>
+                            <input
+                                id="harga"
+                                type="number"
+                                min="1"
+                                placeholder="180000"
+                                required
+                            >
+                        </div>
+
+                        <div class="field full">
+
+                            <button class="btn">
+                                Simpan Data Buku
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- File JavaScript -->
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/stok.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- Bagian Ilustrasi dan Informasi -->
+        <section class="login-art">
+
+            <div class="brand">
+                <span class="brand-mark">B</span>
+                BukuKita
+            </div>
+
+            <div style="font-size: 56px; margin-top: 45px;">
+                📚
+            </div>
+
+            <h1>
+                Temukan buku,<br>
+                mulai cerita baru.
+            </h1>
+
+            <p>
+                Selamat datang di BukuKita, aplikasi pemesanan buku
+                sederhana untuk membantu Anda menemukan dan memesan
+                buku favorit.
+            </p>
+
+            <small style="color: #cbd7ff; margin-top: 35px;">
+                UTS Pemrograman Web 1 · HTML, CSS & JavaScript
+            </small>
+
+        </section>
+
+        <!-- Bagian Form Login -->
+        <section class="login-form-side">
+
+            <div class="login-box">
+
+                <h2>Selamat datang!</h2>
+
+                <p class="muted">
+                    Masuk ke akun BukuKita untuk melanjutkan.
+                </p>
+
+                <form id="formLogin">
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="nama@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+                    </div>
+
+                    <button class="btn" type="submit">
+                        Login →
+                    </button>
+
+                </form>
+
+                <!-- Link Lupa Password dan Daftar -->
+                <div class="login-links">
+
+                    <a
+                        href="#"
+                        onclick="bukaModal('modalLupa'); return false"
+                    >
+                        Lupa Password?
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick="bukaModal('modalDaftar'); return false"
+                    >
+                        Daftar akun
+                    </a>
+
+                </div>
+
+                <!-- Informasi Akun Demo -->
+                <div class="notice" style="margin-top: 25px;">
+
+                    <strong>Akun demo:</strong><br>
+
+                    rina@gmail.com / rina123<br>
+                    agus@gmail.com / agus123<br>
+                    siti@gmail.com / siti123
+
+                </div>
+
+                <div class="footer-note">
+                    © 2026 BukuKita. Aplikasi simulasi front-end.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Modal Daftar Akun -->
+    <div class="modal-backdrop" id="modalDaftar">
+
+        <div class="modal">
+
+            <div class="modal-head">
+
+                <h2>Daftar Akun</h2>
+
+                <button
+                    class="close"
+                    onclick="tutupModal('modalDaftar')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <form id="formDaftar" class="form-grid">
+
+                <div class="field full">
+                    <label>Nama lengkap</label>
+                    <input id="daftarNama" required>
+                </div>
+
+                <div class="field full">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="daftarEmail"
+                        required
+                    >
+                </div>
+
+                <div class="field full">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="daftarPassword"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="field full">
+                    <button class="btn">
+                        Buat Akun
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal-backdrop" id="modalLupa">
+
+        <div class="modal">
+
+            <div class="modal-head">
+
+                <h2>Lupa Password</h2>
+
+                <button
+                    class="close"
+                    onclick="tutupModal('modalLupa')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <p class="muted">
+                Masukkan email yang terdaftar. Karena ini aplikasi
+                demo tanpa server, password akan ditampilkan
+                melalui alert.
+            </p>
+
+            <form id="formLupa">
+
+                <div class="field">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="lupaEmail"
+                        required
+                    >
+
+                </div>
+
+                <div class="actions">
+
+                    <button class="btn">
+                        Periksa Email
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- File JavaScript -->
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

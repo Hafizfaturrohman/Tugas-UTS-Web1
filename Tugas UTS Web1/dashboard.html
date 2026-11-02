@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">B</span>
+                BukuKita
+            </a>
+
+            <div class="nav-label">MENU UTAMA</div>
+
+            <nav>
+
+                <a class="nav-link active" href="dashboard.html">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a class="nav-link " href="stok.html">
+                    <span class="nav-icon">▤</span>
+                    Stok / Katalog
+                </a>
+
+                <a class="nav-link " href="checkout.html">
+                    <span class="nav-icon">🛒</span>
+                    Pemesanan
+                </a>
+
+                <a class="nav-link " href="tracking.html">
+                    <span class="nav-icon">⇢</span>
+                    Tracking
+                </a>
+
+                <a class="nav-link " href="laporan.html">
+                    <span class="nav-icon">▥</span>
+                    Laporan
+                </a>
+
+                <a class="nav-link " href="history.html">
+                    <span class="nav-icon">◷</span>
+                    History Transaksi
+                </a>
+
+            </nav>
+
+            <!-- Informasi Sidebar -->
+            <div class="sidebar-bottom">
+                Aplikasi Pemesanan Buku<br>
+                UTS Pemrograman Web 1<br>
+                © <span id="tahun"></span> BukuKita
+            </div>
+
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <div class="crumb">
+                        BukuKita / Dashboard
+                    </div>
+
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="user-pill">
+
+                    <span class="avatar" id="inisial">U</span>
+
+                    <span id="namaPengguna">Pengguna</span>
+
+                    <button class="btn btn-light btn-small" data-logout>
+                        Keluar
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- Sambutan Pengguna -->
+            <section class="hero">
+
+                <div>
+
+                    <h2 id="greeting">
+                        Selamat datang!
+                    </h2>
+
+                    <p>
+                        Senang melihat Anda kembali,
+                        <strong id="namaPengguna">Pengguna</strong>.
+                    </p>
+
+                    <p id="tanggalHariIni" style="margin-top: 9px; font-size: 13px"></p>
+
+                </div>
+
+                <div class="hero-symbol">
+                    📚
+                </div>
+
+            </section>
+
+            <!-- Statistik Dashboard -->
+            <section class="stats">
+
+                <div class="card stat">
+
+                    <span class="stat-icon">▤</span>
+
+                    <div class="stat-label">
+                        Jenis Buku
+                    </div>
+
+                    <div class="stat-value" id="statKatalog">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="card stat">
+
+                    <span class="stat-icon">🛒</span>
+
+                    <div class="stat-label">
+                        Transaksi Baru
+                    </div>
+
+                    <div class="stat-value" id="statTransaksi">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="card stat">
+
+                    <span class="stat-icon">⇢</span>
+
+                    <div class="stat-label">
+                        Nomor Tracking
+                    </div>
+
+                    <div class="stat-value" id="statTracking">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="card stat">
+
+                    <span class="stat-icon">✓</span>
+
+                    <div class="stat-label">
+                        Layanan
+                    </div>
+
+                    <div class="stat-value">
+                        Aktif
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Akses Cepat dan Informasi Belanja -->
+            <div class="grid-2">
+
+                <!-- Akses Cepat -->
+                <section class="card">
+
+                    <div class="section-head" style="margin: 0 0 16px">
+                        <h2>Akses Cepat</h2>
+                    </div>
+
+                    <div class="quick-grid">
+
+                        <a class="quick" href="stok.html">
+
+                            <span class="quick-icon">📖</span>
+
+                            <span>
+                                <strong>Katalog Buku</strong>
+                                <small>Lihat dan pilih buku</small>
+                            </span>
+
+                        </a>
+
+                        <a class="quick" href="checkout.html">
+
+                            <span class="quick-icon">🛒</span>
+
+                            <span>
+                                <strong>Pemesanan</strong>
+                                <small>Periksa keranjang</small>
+                            </span>
+
+                        </a>
+
+                        <a class="quick" href="tracking.html">
+
+                            <span class="quick-icon">🚚</span>
+
+                            <span>
+                                <strong>Tracking</strong>
+                                <small>Lacak pengiriman</small>
+                            </span>
+
+                        </a>
+
+                        <a class="quick" href="laporan.html">
+
+                            <span class="quick-icon">📊</span>
+
+                            <span>
+                                <strong>Laporan</strong>
+                                <small>Ringkasan pemesanan</small>
+                            </span>
+
+                        </a>
+
+                        <a class="quick" href="history.html">
+
+                            <span class="quick-icon">🕘</span>
+
+                            <span>
+                                <strong>History Transaksi</strong>
+                                <small>Daftar transaksi</small>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <!-- Informasi Mulai Berbelanja -->
+                <section class="card">
+
+                    <div class="section-head" style="margin: 0 0 12px">
+                        <h2>Mulai berbelanja</h2>
+                    </div>
+
+                    <p class="muted" style="line-height: 1.8">
+                        Pilih buku dari katalog, masukkan ke keranjang,
+                        lalu lengkapi informasi pemesan dan pembayaran.
+                    </p>
+
+                    <a href="stok.html" class="btn">
+                        Lihat Katalog →
+                    </a>
+
+                    <div class="notice" style="margin-top: 18px">
+                        Data aplikasi disimpan sementara di browser
+                        menggunakan <strong>localStorage</strong>.
+                        Tidak menggunakan database atau backend.
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- File JavaScript -->
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

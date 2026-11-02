@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman | BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark">B</span>
+                BukuKita
+            </a>
+
+            <div class="nav-label">MENU UTAMA</div>
+
+            <nav>
+
+                <a class="nav-link " href="dashboard.html">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a class="nav-link " href="stok.html">
+                    <span class="nav-icon">▤</span>
+                    Stok / Katalog
+                </a>
+
+                <a class="nav-link " href="checkout.html">
+                    <span class="nav-icon">🛒</span>
+                    Pemesanan
+                </a>
+
+                <a class="nav-link active" href="tracking.html">
+                    <span class="nav-icon">⇢</span>
+                    Tracking
+                </a>
+
+                <a class="nav-link " href="laporan.html">
+                    <span class="nav-icon">▥</span>
+                    Laporan
+                </a>
+
+                <a class="nav-link " href="history.html">
+                    <span class="nav-icon">◷</span>
+                    History Transaksi
+                </a>
+
+            </nav>
+
+            <!-- Informasi Sidebar -->
+            <div class="sidebar-bottom">
+                Aplikasi Pemesanan Buku<br>
+                UTS Pemrograman Web 1<br>
+                © <span id="tahun"></span> BukuKita
+            </div>
+
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <div class="crumb">
+                        BukuKita / Tracking Pengiriman
+                    </div>
+
+                    <h1>Tracking Pengiriman</h1>
+                </div>
+
+                <div class="user-pill">
+
+                    <span class="avatar" id="inisial">U</span>
+
+                    <span id="namaPengguna">Pengguna</span>
+
+                    <button class="btn btn-light btn-small" data-logout>
+                        Keluar
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- Form Tracking Pengiriman -->
+            <div class="card">
+
+                <h2 style="font: 700 18px Manrope; color: #172554; margin: 0 0 8px">
+                    Lacak Pesanan Anda
+                </h2>
+
+                <p class="muted">
+                    Masukkan nomor Delivery Order (DO) untuk melihat status pengiriman.
+                </p>
+
+                <form
+                    id="formTracking"
+                    style="display: flex; gap: 10px; max-width: 620px; flex-wrap: wrap; margin: 18px 0"
+                >
+
+                    <input
+                        id="nomorDO"
+                        required
+                        placeholder="Contoh: 20230012"
+                        style="flex: 1; min-width: 200px; padding: 12px; border: 1px solid #dce2ec; border-radius: 9px"
+                    >
+
+                    <button class="btn">
+                        Cari Pengiriman
+                    </button>
+
+                </form>
+
+                <!-- Informasi Nomor DO -->
+                <div class="notice">
+                    Nomor DO contoh dari data.js:
+                    <strong>20230012</strong> dan
+                    <strong>20230013</strong>.
+                    Pesanan baru akan memperoleh nomor DO otomatis.
+                </div>
+
+            </div>
+
+            <!-- Hasil Tracking -->
+            <div id="hasilTracking" style="margin-top: 18px">
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- File JavaScript -->
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/tracking.js"></script>
+
+</body>
+
+</html>
